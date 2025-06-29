@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 //Import pages
@@ -8,15 +8,20 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 //Import components
 import Navbar from "./components/Navbar";
+import logo from "./images/logo.png";
 
 
 function App() {
   return (
     <Router>
       <header>
-        <title>My Portfolio</title>
+        <title>Brandon Wendell</title>
       </header>
-      <Navbar />
+      <div id="header">
+        <img id="logo-image" src={logo} alt="Logo"/>
+        <h1 id="site-title">Brandon Wendell</h1>
+        <Navbar />
+      </div>
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
