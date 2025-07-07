@@ -1,0 +1,64 @@
+/* Outer container for overall size */
+#swiper-div {
+  width: 90%;
+  min-width: 100%;
+  margin: auto;
+  padding: 20px 0;
+}
+
+/* Each slide size */
+.swiper-slide {
+  width: 400px !important;
+  height: 250px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Inner custom styling for each slide */
+.gallery-slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.gallery-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+
+.gallery-slide:hover img {
+  filter: grayscale(100%) brightness(0.6);
+}
+
+/* Caption overlay */
+.hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.gallery-slide:hover .hover-overlay {
+  opacity: 1;
+}
+
+.caption {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 12px 20px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+}

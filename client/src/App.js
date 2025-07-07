@@ -17,19 +17,26 @@ function App() {
       <header>
         <title>Brandon Wendell</title>
       </header>
-      <div id="header">
-        <img id="logo-image" src={logo} alt="Logo"/>
-        <h1 id="site-title">Brandon Wendell</h1>
-        <Navbar />
+      <div id="background-wrapper">
+        <nav>
+          <div id="header">
+            <img id="logo-image" src={logo} alt="Logo"/>
+            <h1 id="site-title">Brandon Wendell</h1>
+            <Navbar />
+          </div>
+        </nav>
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
       </div>
-      <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </main>
+      <div id="footer">
+          <h1>Hi</h1>
+      </div>
     </Router>
   );
 }
