@@ -1,0 +1,76 @@
+#education-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 0;
+}
+
+.education-card {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  transition: transform 0.2s ease;
+}
+.education-card:hover {
+  transform: scale(1.03);
+}
+
+.education-header {
+  position: relative;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.education-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.6) blur(1px) ;
+  z-index: 0;
+}
+
+.education-institute {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  padding: 0 15px;
+}
+
+.education-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.education-body h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.education-body h3 {
+  margin: 0px 5px;
+  color: #444;
+  font-size: 1.25rem;
+}
+
+/* School-specific backgrounds */
+.education-header.midview::before {
+  background-image: url("https://cmsv2-assets.apptegy.net/uploads/6587/file/3563684/5922faa4-20e0-4b8d-884c-54860fd60885.png");
+}
+
+.education-header.csu::before {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTTuTVLCP8QyEYERb6ibomJg6TOBrsuFI2Fg&s");
+}

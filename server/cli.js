@@ -1,6 +1,7 @@
 const readline = require('readline');
 const db = require('./db/db');
-const gallery = require('./script/gallery')
+const gallery = require('./script/gallery');
+const experience = require('./script/experience');
 function commandline () {
     db.serialize(() => {
         const rl = readline.createInterface({
@@ -23,14 +24,12 @@ function commandline () {
             - projectimage: Allows entry of project image info into db
             - experience: Enter info into db about experience
             - close: Closes server
-            
             */
             switch(input[0]) {
                 case 'help':
                     console.log("In progress");
                     break;
                 case 'gallery':
-                    console.log("In progress");
                     gallery(input[1], input[2], input[3]);
                     break;
                 case 'project':
@@ -41,6 +40,7 @@ function commandline () {
                     break;
                 case 'experience':
                     console.log("In progress");
+                    experience(input[1], input[2], input[3], input[4], input[5], input[6], input[7]);
                     break;
                 case 'exit':
                     console.log("Closing connection...");
