@@ -49,6 +49,14 @@ function Setup () {
             desc TEXT NOT NULL
         )
     `);
+    db.run(`
+        CREATE TABLE IF NOT EXISTS skills(
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            skill TEXT NOT NULL,
+            imageSrc TEXT NOT NULL,
+            imgAlt TEXT NOT NULL
+        )
+    `);
 }
 
 module.exports = db;

@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 import axios from "axios";
-import "./styling/Experience.css"
+import "./styling/Experience.css";
 
 //Shows a list of experience cards
 function Experience () {
     const [experience, setExperience] = useState([{}]);
 
     useEffect(() => {
-        axios.get("http://localhost:4000/api/Gallery/load_experience")
+        axios.get("http://localhost:4000/api/experience/load_experience")
             .then((res) => {
             if (res.data && Array.isArray(res.data)) {
                 setExperience(res.data);
@@ -15,7 +15,7 @@ function Experience () {
                 console.error("Unexpected response structure:", res.data);
             }
             })
-            .catch((err) => console.error("Failed to load gallery:", err));
+            .catch((err) => console.error("Failed to load experience:", err));
     }, []);
 
     return (

@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import './styling/Navbar.css';
 
-function Navbar () {
+function Navbar({ scrollTo, aboutRef, galleryRef, experienceRef, educationRef, skillsRef, projectsRef, contactRef }) {
     const location = useLocation();
     const isHome = location.pathname === "/";
 
@@ -10,43 +10,56 @@ function Navbar () {
             <div id="navbar-div">
                 <ul id="navbar">
                     <li className="navbar-link"><Link to="/">Home</Link></li>
+
                     <li className="navbar-link">
                         {isHome ? (
-                            <a href="#gallery-div">Gallery</a>
+                            <button onClick={() => scrollTo(aboutRef)}>About</button>
+                        ) : (
+                            <Link to="/#about-div">About</Link>
+                        )}
+                    </li>
+                    <li className="navbar-link">
+                        {isHome ? (
+                            <button onClick={() => scrollTo(galleryRef)}>Gallery</button>
                         ) : (
                             <Link to="/#gallery-div">Gallery</Link>
                         )}
                     </li>
                     <li className="navbar-link">
                         {isHome ? (
-                            <a href="#experience-div">Experience</a>
+                            <button onClick={() => scrollTo(experienceRef)}>Experience</button>
                         ) : (
                             <Link to="/#experience-div">Experience</Link>
                         )}
                     </li>
                     <li className="navbar-link">
                         {isHome ? (
-                            <a href="#skills-div">Education</a>
+                            <button onClick={() => scrollTo(educationRef)}>Education</button>
                         ) : (
-                            <Link to="/#skills-div">Education</Link>
+                            <Link to="/#education-div">Education</Link>
                         )}
                     </li>
                     <li className="navbar-link">
                         {isHome ? (
-                            <a href="#education-div">Skills</a>
+                            <button onClick={() => scrollTo(skillsRef)}>Skills</button>
                         ) : (
-                            <Link to="/#education-div">Skills</Link>
+                            <Link to="/#skills-div">Skills</Link>
                         )}
                     </li>
                     <li className="navbar-link">
                         {isHome ? (
-                            <a href="#projects-div">Projects</a>
+                            <button onClick={() => scrollTo(projectsRef)}>Projects</button>
                         ) : (
                             <Link to="/#projects-div">Projects</Link>
                         )}
                     </li>
-                    <li className="navbar-link"><Link to="/about">About</Link></li>
-                    <li className="navbar-link-1"><Link to="/contact">Contact</Link></li>
+                    <li className="navbar-link-1">
+                        {isHome ? (
+                            <button onClick={() => scrollTo(contactRef)}>Contact</button>
+                        ) : (
+                            <Link to="/#contact-div">Contact</Link>
+                        )}
+                    </li>
                 </ul>
             </div>
         </nav>

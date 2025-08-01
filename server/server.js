@@ -9,6 +9,7 @@ const PORT = 4000;
 const projectRoutes = require('./routes/Projects');
 const galleryRoutes = require('./routes/Gallery');
 const experienceRoutes = require('./routes/Experience');
+const skillsRoutes = require('./routes/Skills');
 
 //Add CLI
 const commandline = require('./cli');
@@ -19,7 +20,8 @@ app.use(express.json());
 
 app.use('/api/project', projectRoutes);
 app.use('/api/gallery', galleryRoutes);
-app.use('/api/gallery', experienceRoutes);
+app.use('/api/experience', experienceRoutes);
+app.use('/api/skills', skillsRoutes);
 
 //Serves uploaded files to front end
 app.use('/storage', express.static(path.join(__dirname, 'storage')));

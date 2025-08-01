@@ -2,6 +2,7 @@ const readline = require('readline');
 const db = require('./db/db');
 const gallery = require('./script/gallery');
 const experience = require('./script/experience');
+const skills = require('./script/skills');
 function commandline () {
     db.serialize(() => {
         const rl = readline.createInterface({
@@ -39,8 +40,12 @@ function commandline () {
                     console.log("In progress");
                     break;
                 case 'experience':
-                    console.log("In progress");
+                    console.log("\nInserting experience into DB...");
                     experience(input[1], input[2], input[3], input[4], input[5], input[6], input[7]);
+                    break;
+                case 'skill':
+                    console.log("\nInserting skill into DB...");
+                    skills(input[1], input[2], input[3]);
                     break;
                 case 'exit':
                     console.log("Closing connection...");
