@@ -12,6 +12,7 @@ import Experience from '../components/Experience';
 import Education from '../components/Education';
 import Skills from '../components/Skills';
 import About from '../components/About';
+import Contact from '../components/Contact';
 
 function Home () {
     const location = useLocation();
@@ -108,6 +109,7 @@ function Home () {
 
                 <div id="contact-div" ref={contactRef}>
                     <h1 id="contact-heading">✉︎ Contact Me</h1>
+                    <Contact />
                 </div>
             </div>
         </>
