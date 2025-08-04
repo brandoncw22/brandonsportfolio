@@ -10,6 +10,7 @@ const projectRoutes = require('./routes/Projects');
 const galleryRoutes = require('./routes/Gallery');
 const experienceRoutes = require('./routes/Experience');
 const skillsRoutes = require('./routes/Skills');
+const contactRoutes = require('./routes/Contact');
 
 //Add CLI
 const commandline = require('./cli');
@@ -22,6 +23,7 @@ app.use('/api/project', projectRoutes);
 app.use('/api/gallery', galleryRoutes);
 app.use('/api/experience', experienceRoutes);
 app.use('/api/skills', skillsRoutes);
+app.use('/api/contact', contactRoutes);
 
 //Serves uploaded files to front end
 app.use('/storage', express.static(path.join(__dirname, 'storage')));
