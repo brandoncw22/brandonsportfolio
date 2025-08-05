@@ -76,7 +76,7 @@ function Contact() {
           <textarea 
             id="inquiry" 
             name="inquiry"
-            placeholder="Tell us about your project" 
+            placeholder="Write out your inquiry" 
             value={formData.inquiry} 
             onChange={handleChange} 
           ></textarea>
