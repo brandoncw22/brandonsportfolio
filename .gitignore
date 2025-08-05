@@ -1,0 +1,3 @@
+server/.env
+server/portfolio.db
+node_modules
