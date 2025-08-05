@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../db/db');
+const nodemailer = require("nodemailer");
 
 router.post('/contact_submit', (req, res) => {
   const { name, email, phone, inquiry } = req.body;
