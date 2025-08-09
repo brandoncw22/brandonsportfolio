@@ -3,12 +3,13 @@ const db = require('./db/db');
 const gallery = require('./script/gallery');
 const experience = require('./script/experience');
 const skills = require('./script/skills');
+const project = require('./script/project');
 function commandline () {
     db.serialize(() => {
         const rl = readline.createInterface({
             input: process.stdin,
             output: process.stdout,
-            prompt: 'admin@portfolio>> '
+            prompt: '/> '
         });
         console.log('\nConnected to SQLite database.');
         rl.prompt();
@@ -34,7 +35,8 @@ function commandline () {
                     gallery(input[1], input[2], input[3]);
                     break;
                 case 'project':
-                    console.log("In progress");
+                    console.log("\nInserting Project into DB..");
+                    project(input[1], input[2], input[3], input[4], input[5], input[6]);
                     break;
                 case 'projectimage':
                     console.log("In progress");
