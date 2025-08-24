@@ -13,6 +13,7 @@ import Education from '../components/Education';
 import Skills from '../components/Skills';
 import About from '../components/About';
 import Contact from '../components/Contact';
+import Projects from '../components/Projects';
 
 function Home () {
     const location = useLocation();
@@ -105,6 +106,7 @@ function Home () {
 
                 <div id="projects-div" ref={projectsRef}>
                     <h1 id="projects-heading">🖥️ Projects</h1>
+                    <Projects />
                 </div>
 
                 <div id="contact-div" ref={contactRef}>

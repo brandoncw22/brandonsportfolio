@@ -47,7 +47,7 @@ function project(title, status, techstack, descFile, github = null, live = null)
   try {
     description = readTextPreserveWhitespace(descFile);
   } catch (err) {
-    console.error('❌ Failed to read description file:', err.message);
+    console.error('Failed to read description file:', err.message);
     return;
   }
 
