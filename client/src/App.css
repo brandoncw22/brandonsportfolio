@@ -20,6 +20,11 @@
   background:linear-gradient(180deg, #004181,#001260);
   padding: 10px;
   height: 100%;
+  display: flex;
+}
+.icon{
+  width: 80px;
+  height: 80px;
 }
 #logo-image {
   height: 100px;

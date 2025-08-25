@@ -6,10 +6,11 @@ import "./styling/Projects.css";
 
 function Projects() {
   const [projects, setProjects] = useState([]);
+  const API_BASE = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/api/project/loadprojects")
+      .get(`${API_BASE}/api/project/loadprojects`)
       .then((res) => setProjects(res.data))
       .catch((err) => console.error("Failed to load projects:", err));
   }, []);
@@ -25,7 +26,7 @@ function Projects() {
               style={{
                 backgroundImage:
                   project.images.length > 0
-                    ? `url(http://localhost:4000${project.images[0].src})`
+                    ? `url(${API_BASE}${project.images[0].src})`
                     : "none",
               }}
             >
@@ -55,7 +56,7 @@ function Projects() {
                 {project.images.map((img, i) => (
                   <img
                     key={i}
-                    src={`http://localhost:4000${img.src}`}
+                    src={`${API_BASE}${img.src}`}
                     alt={img.alt}
                     className="slideshow-img"
                   />

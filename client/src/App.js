@@ -3,6 +3,7 @@ import './App.css';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 //Import pages
 import Home from "./pages/Home";
+import githubicon from "./images/github.png";
 
 
 
@@ -21,7 +22,10 @@ function App() {
         </main>
       </div>
       <div id="footer">
-          <h1>Hi</h1>
+          <a href="https://github.com/brandoncw22">
+            <img className="icon" src={githubicon} alt="Github Icon" />
+          </a>
+          
       </div>
     </Router>
   );
