@@ -21,10 +21,23 @@
   padding: 10px;
   height: 100%;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.icon{
-  width: 80px;
-  height: 80px;
+.icon.github, .icon.linkedin{
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+}
+.icon.email{
+  width: 55px;
+  height: 55px;
+  margin: 9px 10px;
+}
+.socialicons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #logo-image {
   height: 100px;
