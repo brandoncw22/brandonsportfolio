@@ -304,3 +304,14 @@ html, body {
   2px 2px 3px rgba(0, 0, 0, 0.4); 
 }
 
+.social-links {
+  display:flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.icon.email {
+  width: 36px;
+  height: 36px;
+  margin-top: 3px;
+  margin-left: 5px;
+}

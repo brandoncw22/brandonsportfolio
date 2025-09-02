@@ -15,31 +15,51 @@
   background: linear-gradient(180deg, #63cbff, #4f7eff);
   z-index: -1;
 }
+#logo-image {
+  height: 100px;
+}
 
-#footer{
-  background:linear-gradient(180deg, #004181,#001260);
-  padding: 10px;
-  height: 100%;
+#footer {
+  background: linear-gradient(180deg, #004181, #001260);
+  padding: 20px 20px;
   display: flex;
+  flex-direction: column;  /* stack content vertically */
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
 }
-.icon.github, .icon.linkedin{
-  width: 60px;
-  height: 60px;
-  margin: 5px;
+
+.footer-content {
+  color: white;
+  text-align: center;
+  margin-bottom: 15px;
 }
-.icon.email{
-  width: 55px;
-  height: 55px;
-  margin: 9px 10px;
+
+.footer-heading {
+  margin-bottom: 8px;
 }
+
 .socialicons {
   display: flex;
   justify-content: center;
-  align-items: center;
+  gap: 20px;
 }
-#logo-image {
-  height: 100px;
-  width: 100px;
+
+.icon.github, .icon.linkedin {
+  width: 40px;
+  height: 40px;
+}
+
+.icon.email {
+  width: 36px;
+  height: 36px;
+}
+
+.icon {
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+.icon:hover {
+  transform: scale(1.15);
 }

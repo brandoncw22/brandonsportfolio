@@ -77,17 +77,18 @@ function Home () {
                             <button onClick={() => scrollTo(aboutRef)}>About Me</button>
                             <button onClick={() => scrollTo(contactRef)}>Contact</button>
                         </div>
-                        <div id="media-buttons"></div>
-                        <div className="socialicons">
-                            <a href="https://github.com/brandoncw22">
-                                <img className="icon github" src={githubicon} alt="Github Icon" />
-                            </a>
-                            <a href="https://www.linkedin.com/in/brandon-wendell">
-                                <img className="icon linkedin" src={linkedin_icon} alt="linkedin icon" />
-                            </a>
-                            <a href="mailto:brandon.c.wendell@gmail.com">
-                                <img className="icon email" src={emailicon} alt="email icon" />
-                            </a>
+                        <div>
+                            <div className="social-links">
+                                <a target="_blank" rel="noopener noreferrer" href="https://github.com/brandoncw22">
+                                    <img className="icon github elevator" src={githubicon} alt="Github Icon" />
+                                </a>
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/brandon-wendell">
+                                    <img className="icon linkedin elevator" src={linkedin_icon} alt="linkedin icon" />
+                                </a>
+                                <a target="_blank" rel="noopener noreferrer" href="mailto:brandon.c.wendell@gmail.com">
+                                    <img className="icon email elevator" src={emailicon} alt="email icon" />
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <img className="profile-image" src={profileImage} alt="Profile"/>
