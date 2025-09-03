@@ -12,10 +12,8 @@ const experienceRoutes = require('./routes/Experience');
 const skillsRoutes = require('./routes/Skills');
 const contactRoutes = require('./routes/Contact');
 
-require('./db/db.js')
-
 //Add CLI
-//const commandline = require('./cli');
+const commandline = require('./cli');
 
 
 app.use(cors());
@@ -36,4 +34,4 @@ app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on http://0.0.0.0:${PORT}`);
 });
 
-//commandline();
+commandline();
