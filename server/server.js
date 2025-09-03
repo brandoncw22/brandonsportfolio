@@ -12,7 +12,7 @@ const experienceRoutes = require('./routes/Experience');
 const skillsRoutes = require('./routes/Skills');
 const contactRoutes = require('./routes/Contact');
 
-const db = require('./db/db.js')
+require('./db/db.js')
 
 //Add CLI
 //const commandline = require('./cli');
