@@ -13,7 +13,7 @@ const skillsRoutes = require('./routes/Skills');
 const contactRoutes = require('./routes/Contact');
 
 //Add CLI
-const commandline = require('./cli');
+//const commandline = require('./cli');
 
 
 app.use(cors());
@@ -29,5 +29,9 @@ app.use('/api/contact', contactRoutes);
 app.use('/storage', express.static(path.join(__dirname, 'storage')));
 
 
-app.listen(PORT, console.log(`Server running on http://localhost:${PORT}`));
-commandline();
+
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server running on http://0.0.0.0:${PORT}`);
+});
+
+//commandline();

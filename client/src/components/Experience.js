@@ -7,7 +7,7 @@ function Experience () {
     const [experience, setExperience] = useState([{}]);
 
     useEffect(() => {
-        axios.get("http://localhost:4000/api/experience/load_experience")
+        axios.get(`${process.env.REACT_APP_API_URL}/api/experience/load_experience`)
             .then((res) => {
             if (res.data && Array.isArray(res.data)) {
                 setExperience(res.data);

@@ -12,7 +12,7 @@ function Gallery() {
         {}
     ]);
     useEffect(() => {
-        axios.get("http://localhost:4000/api/Gallery/load_gallery")
+        axios.get(`${process.env.REACT_APP_API_URL}/api/Gallery/load_gallery`)
             .then((res) => {
             if (res.data && Array.isArray(res.data)) {
                 setGallery(res.data);

@@ -5,7 +5,7 @@ import "./styling/Skills.css";
 function Skills () {
     const [skills, setSkills] = useState([{}]);
     useEffect(() => {
-        axios.get("http://localhost:4000/api/skills/loadskills")
+        axios.get(`${process.env.REACT_APP_API_URL}/api/skills/loadskills`)
             .then((res) => {
             if (res.data && Array.isArray(res.data)) {
                 setSkills(res.data);

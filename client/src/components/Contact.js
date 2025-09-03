@@ -10,7 +10,7 @@ function Contact() {
     inquiry: "",
   });
   const handleFormSubmit = (formData) => {
-    axios.post("http://localhost:4000/api/contact/contact_submit", formData, {
+    axios.post(`${process.env.REACT_APP_API_URL}/api/contact/contact_submit`, formData, {
         headers: { "Content-Type": "application/json" }
     })
     .then((res) => {
