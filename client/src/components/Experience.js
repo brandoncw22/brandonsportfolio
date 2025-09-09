@@ -23,7 +23,7 @@ function Experience () {
             {experience.map((experience, index) => (
                 <>
                 <div className="card" id={`experience-id-${index}`}>
-                    <img className={`company-${experience.jobCompany}`} src={experience.imageSrc} alt={experience.imageAlt} />
+                    <img className={`company-${experience.jobCompany}`} src={`${process.env.REACT_APP_API_URL}${experience.imageSrc}`} alt={experience.imageAlt} />
                     <div className="card-content">
                         <h1 className="experience-heading">{experience.jobTitle} – {experience.jobCompany} – {experience.beginDate} to {experience.endDate}</h1>
                         <p>{experience.desc}.</p>

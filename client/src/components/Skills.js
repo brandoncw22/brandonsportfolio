@@ -19,7 +19,7 @@ function Skills () {
         <div id="skills-box">
             {skills.map((skill) => (
                 <div className="skill">
-                    <img className={`skill-icon ` + skill.skill} src={skill.imageSrc} alt={skill.imgAlt} />
+                    <img className={`skill-icon ` + skill.skill} src={`${process.env.REACT_APP_API_URL}${skill.imageSrc}`} alt={skill.imgAlt} />
                     <div className="skill-overlay">
                         <span className="skill-title">{skill.skill}</span>
                     </div>
