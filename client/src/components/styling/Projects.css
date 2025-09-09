@@ -73,3 +73,16 @@
 .close-btn:hover {
   background: #1976d2;
 }
+
+@media (max-width: 900px) {
+  .project-card { width: 42vw; height: calc(42vw * 0.63); margin: 10px; border-radius: 16px; }
+  .modal-content { width: 92%; border-radius: 16px; padding: 20px; }
+  .slideshow { gap: 10px; }
+  .slideshow-img { width: 40vw; }
+}
+
+@media (max-width: 600px) {
+  .project-card { width: 90vw; height: calc(90vw * 0.63); }
+  .project-title { font-size: 1.3rem; }
+  .slideshow-img { width: 80vw; }
+}

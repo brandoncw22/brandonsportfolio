@@ -38,3 +38,14 @@
   padding: 0 10px;
   text-shadow: 1px 1px 5px black;
 }
+
+@media (max-width: 900px) {
+  #about-box { width: 90%; padding: 28px; gap: 24px; border-radius: 24px; }
+  #about-img { width: min(60vw, 320px); height: auto; aspect-ratio: 1 / 1; }
+  #about-paragraph { font-size: 1.1em; text-indent: 1.5em; }
+}
+
+@media (max-width: 600px) {
+  #about-box { width: 95%; padding: 20px; gap: 16px; }
+  #about-paragraph { font-size: 1em; text-indent: 1em; }
+}

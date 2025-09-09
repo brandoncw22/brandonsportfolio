@@ -5,6 +5,9 @@
   align-items: flex-start;
   gap: 40px;
   padding: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 /* Form card */
@@ -17,6 +20,7 @@
   border-radius: 20px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.15);
   width: 500px;
+  max-width: 100%;
   box-sizing: border-box;           /* ✅ */
 }
 
@@ -92,4 +96,20 @@
   #contact-submit {
     grid-column: 1 / -1;           /* full width below fields */
   }
+}
+
+@media (max-width: 600px) {
+  #contact-box { padding: 16px; gap: 16px; }
+  #contact-form { padding: 18px; border-radius: 16px; }
+  #contact-form label { font-size: 0.95rem; }
+  #contact-form input,
+  #contact-form textarea { padding: 10px 12px; border-radius: 12px; font-size: 16px; }
+  #contact-submit { padding: 12px; border-radius: 12px; width: 100%; }
+  #contact-info { padding: 18px; border-radius: 16px; }
+  #contact-info p { font-size: 14px; }
+}
+
+@media (max-width: 400px) {
+  #contact-form { padding: 14px; }
+  #contact-info { padding: 14px; }
 }

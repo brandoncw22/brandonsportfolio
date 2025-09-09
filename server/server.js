@@ -15,7 +15,7 @@ const contactRoutes = require('./routes/Contact');
 //Add CLI
 const commandline = require('./cli');
 
-const allowed = ['https://portfolio.bcwendell.com'];
+const allowed = ['https://portfolio.bcwendell.com', 'http://localhost:3002'];
 app.use(cors({ origin: allowed, credentials: true }));
 app.use(express.json());
 

@@ -74,3 +74,15 @@
 .education-header.csu::before {
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTTuTVLCP8QyEYERb6ibomJg6TOBrsuFI2Fg&s");
 }
+
+@media (max-width: 900px) {
+  .education-card { width: 90vw; border-radius: 20px; }
+  .education-header { height: 140px; }
+}
+
+@media (max-width: 600px) {
+  .education-header { height: 120px; }
+  .education-institute { font-size: 1.4rem; }
+  .education-body h2 { font-size: 1.3rem; }
+  .education-body h3 { font-size: 1.05rem; }
+}

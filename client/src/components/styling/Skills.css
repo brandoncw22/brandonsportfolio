@@ -61,3 +61,15 @@
   font-weight: 600;
   border-radius: 8px;
 }
+
+@media (max-width: 900px) {
+  #skills-box { width: 90%; border-radius: 28px; padding: 16px 20px; }
+  .skill { margin: 8px; padding: 8px; border-radius: 16px; }
+  .skill-icon { width: 64px; }
+}
+
+@media (max-width: 600px) {
+  #skills-box { width: 95%; border-radius: 20px; }
+  .skill-icon { width: 56px; }
+  .skill-title { font-size: 0.9rem; }
+}
