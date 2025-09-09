@@ -10,7 +10,7 @@ function Projects() {
 
   useEffect(() => {
     axios
-      .get(`${API_BASE}/api/project/loadprojects`)
+      .get(`${API_BASE}/api/projects/loadprojects`)
       .then((res) => setProjects(res.data))
       .catch((err) => console.error("Failed to load projects:", err));
   }, []);

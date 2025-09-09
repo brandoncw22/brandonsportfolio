@@ -19,7 +19,7 @@ const allowed = ['http://portfolio.bcwendell.com'];
 app.use(cors({ origin: allowed, credentials: true }));
 app.use(express.json());
 
-app.use('/api/project', projectRoutes);
+app.use('/api/projects', projectRoutes);
 app.use('/api/gallery', galleryRoutes);
 app.use('/api/experience', experienceRoutes);
 app.use('/api/skills', skillsRoutes);
