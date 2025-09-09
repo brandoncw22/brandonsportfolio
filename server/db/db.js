@@ -1,9 +1,9 @@
-const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
+const sqlite3 = require('sqlite3').verbose();
 
-const dbPath = process.env.DB_PATH || path.resolve(__dirname, '../portfolio.db');
+const DB_PATH = path.join(process.env.DB_DIR || './', 'portfolio.db');
 
-const db = new sqlite3.Database(dbPath, (err) => {
+const db = new sqlite3.Database(DB_PATH, (err) => {
   if (err) return console.error(err.message);
   Setup();
 });
