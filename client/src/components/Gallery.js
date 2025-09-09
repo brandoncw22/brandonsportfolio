@@ -43,7 +43,7 @@ function Gallery() {
             {gallery.map((image, index) => (
                 <SwiperSlide key={index}>
                     <div className="gallery-slide">
-                        <img className="slide-img" src={`${process.env.REACT_APP_API_URL}{image.src}`} alt={image.alt} />
+                        <img className="slide-img" src={`${process.env.REACT_APP_API_URL}${image.src}`} alt={image.alt} />
                         <div className="hover-overlay">
                             <span className="caption">{image.desc}</span>
                         </div>
