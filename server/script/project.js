@@ -1,3 +1,8 @@
+/**
+ * script/project: Insert a project with full description into the DB.
+ * - Reads description text from a UTF-8 file while preserving whitespace
+ * - Inserts project row with title, status, tech stack, optional links
+ */
 // server/script/project.js
 const fs = require('fs');
 const path = require('path');

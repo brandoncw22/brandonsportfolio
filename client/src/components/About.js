@@ -1,3 +1,7 @@
+/**
+ * About: Personal introduction section.
+ * - Displays an image alongside a descriptive paragraph
+ */
 import React from 'react';
 import './styling/About.css'
 import AboutIMG from '../images/about-image.jpg'
@@ -23,4 +27,4 @@ function About (){
     );
 
 }
-export default About;
+export default About; 

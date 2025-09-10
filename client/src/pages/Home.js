@@ -1,3 +1,9 @@
+/**
+ * Home: Landing page composing all site sections.
+ * - Renders navbar, hero, and each content section (About, Gallery, etc.)
+ * - Supports smooth in-page scrolling via refs or hash navigation
+ * - Displays social links and profile image in the hero section
+ */
 import './styling/Home.css';
 import profileImage from '../images/profile.jpg';
 import { useRef, useEffect } from 'react';
@@ -30,6 +36,7 @@ function Home () {
     const projectsRef = useRef(null);
     const contactRef = useRef(null);
 
+    // Helper: Scroll smoothly to a given section ref
     const scrollTo = (ref) => {
         if (ref?.current) {
             ref.current.scrollIntoView({ behavior: 'smooth' });
@@ -73,6 +80,7 @@ function Home () {
                             <span id="two-line-pt1">I'm</span><span id="two-line-pt2"> Brandon Wendell</span><br/>
                             <span id="three-line">Full-Stack Developer</span>
                         </h1>
+                        {/* Quick scroll buttons to key sections */}
                         <div id="direct-buttons">
                             <button onClick={() => scrollTo(aboutRef)}>About Me</button>
                             <button onClick={() => scrollTo(contactRef)}>Contact</button>

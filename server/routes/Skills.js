@@ -1,3 +1,7 @@
+/**
+ * Route: /api/skills
+ * - GET /loadskills -> returns list of skills
+ */
 const express = require('express');
 const router = express.Router();
 const db = require('../db/db');
@@ -9,4 +13,4 @@ router.get('/loadskills', (req, res) => {
   });
 });
 
-module.exports = router;
+module.exports = router; 

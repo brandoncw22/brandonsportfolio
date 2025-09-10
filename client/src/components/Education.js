@@ -1,3 +1,7 @@
+/**
+ * Education: Static education section showing schools and degrees.
+ * - Displays two cards with institution, credential, and dates
+ */
 import { useState, useEffect } from 'react';
 import "./styling/Education.css"
 

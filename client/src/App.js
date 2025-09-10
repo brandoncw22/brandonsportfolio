@@ -1,4 +1,9 @@
-
+/**
+ * App: Root React component for the portfolio site.
+ * - Configures React Router and renders the main `Home` page
+ * - Provides a global footer with contact details and social icons
+ * - Wraps site content with a background/layout container
+ */
 import './App.css';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 //Import pages
@@ -18,6 +23,7 @@ function App() {
       <div id="background-wrapper">
         <main>
           <Routes>
+            {/* Route configuration for SPA */}
             <Route path="/" element={<Home />} />
           </Routes>
         </main>
@@ -30,6 +36,7 @@ function App() {
         </div>
 
         <div className="socialicons">
+          {/* External profile links */}
           <a target="_blank" rel="noopener noreferrer" href="https://github.com/brandoncw22">
             <img className="icon github" src={githubicon} alt="Github Icon" />
           </a>

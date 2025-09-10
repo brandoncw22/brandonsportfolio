@@ -1,3 +1,8 @@
+/**
+ * Contact: Contact form for inquiries.
+ * - Manages simple controlled inputs and posts to API
+ * - Clears form after successful submission
+ */
 import { useState } from "react";
 import "./styling/Contact.css";
 import axios from "axios";
@@ -9,6 +14,7 @@ function Contact() {
     phone: "",
     inquiry: "",
   });
+  // Submit data to backend
   const handleFormSubmit = (formData) => {
     axios.post(`${process.env.REACT_APP_API_URL}/api/contact/contact_submit`, formData, {
         headers: { "Content-Type": "application/json" }

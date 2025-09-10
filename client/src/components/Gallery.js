@@ -1,3 +1,8 @@
+/**
+ * Gallery: Image carousel powered by Swiper.
+ * - Fetches gallery data from API and displays as a coverflow slider
+ * - Shows hover overlay captions for each image
+ */
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -12,6 +17,7 @@ function Gallery() {
         {}
     ]);
     useEffect(() => {
+        // Load gallery items from server
         axios.get(`${process.env.REACT_APP_API_URL}/api/Gallery/load_gallery`)
             .then((res) => {
             if (res.data && Array.isArray(res.data)) {

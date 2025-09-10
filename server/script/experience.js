@@ -1,3 +1,13 @@
+/**
+ * script/experience: Insert an experience record.
+ * @param {string} title
+ * @param {string} company
+ * @param {string} begin
+ * @param {string} end
+ * @param {string} src - filename stored under /storage/experience
+ * @param {string} alt
+ * @param {string} desc
+ */
 const db = require('../db/db');
 
 function experience (title, company, begin, end, src, alt, desc){

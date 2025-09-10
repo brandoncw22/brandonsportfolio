@@ -1,3 +1,10 @@
+/**
+ * script/projectimage: Insert an image that belongs to a project.
+ * @param {string} src - fully qualified URL to the image
+ * @param {string} alt - alt text for accessibility
+ * @param {string} desc - image caption/description
+ * @param {number} projID - related project id (FK)
+ */
 // script/projectimage.js
 const db = require('../db/db');
 

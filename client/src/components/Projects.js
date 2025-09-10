@@ -1,3 +1,8 @@
+/**
+ * Projects: Interactive grid of project cards with modal details.
+ * - Fetches projects + images from API, shows a tile per project
+ * - Uses `reactjs-popup` to render modal with project info and slideshow
+ */
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Popup from "reactjs-popup";

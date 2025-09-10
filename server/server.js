@@ -1,3 +1,10 @@
+/**
+ * server: Express app configuration and bootstrapping.
+ * - Registers API routes (projects, gallery, experience, skills, contact)
+ * - Enables CORS for allowed origins and JSON parsing
+ * - Serves static files under `/storage`
+ * - Starts HTTP server and attaches CLI for DB utilities
+ */
 const express = require('express');
 const app = express();
 const cors = require('cors');

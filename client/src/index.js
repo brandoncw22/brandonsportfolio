@@ -1,3 +1,9 @@
+/**
+ * index: Application entry point.
+ * - Creates the root React DOM node and renders <App />
+ * - Wraps rendering in StrictMode for highlighting potential issues
+ * - Kicks off performance reporting via `reportWebVitals`
+ */
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -6,6 +12,7 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  // StrictMode activates additional checks/warnings in development
   <React.StrictMode>
     <App />
   </React.StrictMode>

@@ -1,3 +1,7 @@
+/**
+ * Route: /api/projects
+ * - GET /loadprojects -> returns projects with nested image arrays
+ */
 const express = require("express");
 const router = express.Router();
 const db = require("../db/db");

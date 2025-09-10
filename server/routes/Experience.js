@@ -1,3 +1,7 @@
+/**
+ * Route: /api/experience
+ * - GET /load_experience -> returns list of experience entries
+ */
 const express = require('express');
 const router = express.Router();
 const db = require('../db/db');

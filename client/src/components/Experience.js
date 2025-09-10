@@ -1,3 +1,8 @@
+/**
+ * Experience: Displays a list of experience cards.
+ * - Loads entries from the API and renders a card per record
+ * - Shows company logo, title, date range, and description
+ */
 import { useState, useEffect } from 'react';
 import axios from "axios";
 import "./styling/Experience.css";
@@ -7,6 +12,7 @@ function Experience () {
     const [experience, setExperience] = useState([{}]);
 
     useEffect(() => {
+        // Fetch experience data from backend
         axios.get(`${process.env.REACT_APP_API_URL}/api/experience/load_experience`)
             .then((res) => {
             if (res.data && Array.isArray(res.data)) {
@@ -23,6 +29,7 @@ function Experience () {
             {experience.map((experience, index) => (
                 <>
                 <div className="card" id={`experience-id-${index}`}>
+                    {/* Company-specific logo & content */}
                     <img className={`company-${experience.jobCompany}`} src={`${process.env.REACT_APP_API_URL}${experience.imageSrc}`} alt={experience.imageAlt} />
                     <div className="card-content">
                         <h1 className="experience-heading">{experience.jobTitle} – {experience.jobCompany} – {experience.beginDate} to {experience.endDate}</h1>

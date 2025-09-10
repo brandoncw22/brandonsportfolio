@@ -1,3 +1,7 @@
+/**
+ * Skills: Grid of skill icons with overlay titles.
+ * - Fetches skills from API and renders each with image + label
+ */
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./styling/Skills.css";
@@ -5,6 +9,7 @@ import "./styling/Skills.css";
 function Skills () {
     const [skills, setSkills] = useState([{}]);
     useEffect(() => {
+        // Load skills from backend
         axios.get(`${process.env.REACT_APP_API_URL}/api/skills/loadskills`)
             .then((res) => {
             if (res.data && Array.isArray(res.data)) {

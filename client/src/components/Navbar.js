@@ -1,8 +1,14 @@
+/**
+ * Navbar: Top navigation links for the single-page app.
+ * - Shows anchor links to sections when on Home
+ * - When off Home, links include hashes to navigate back to sections
+ */
 import { Link, useLocation } from "react-router-dom";
 import './styling/Navbar.css';
 
 function Navbar({ scrollTo, aboutRef, galleryRef, experienceRef, educationRef, skillsRef, projectsRef, contactRef }) {
     const location = useLocation();
+    // Determine if current path is the homepage
     const isHome = location.pathname === "/";
 
     return (

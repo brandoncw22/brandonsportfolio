@@ -1,3 +1,8 @@
+/**
+ * cli: Simple command-line interface for inserting data into the SQLite database.
+ * - Commands: help, gallery, project, projectimage, experience, skill, exit
+ * - Parses quoted arguments and dispatches to helper scripts under ./script
+ */
 const readline = require('readline');
 const db = require('./db/db');
 const gallery = require('./script/gallery');

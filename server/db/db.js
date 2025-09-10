@@ -1,3 +1,8 @@
+/**
+ * db: SQLite3 database initialization and schema setup.
+ * - Creates tables for gallery, projects (+ images), experience, and skills
+ * - Exports a shared sqlite3 Database instance
+ */
 const path = require('path');
 const sqlite3 = require('sqlite3').verbose();
 
@@ -9,6 +14,7 @@ const db = new sqlite3.Database(DB_PATH, (err) => {
 });
 
 function Setup () {
+    // Create tables if they don't already exist
     db.run(`
         CREATE TABLE IF NOT EXISTS image_gallery(
             id INTEGER PRIMARY KEY AUTOINCREMENT,
