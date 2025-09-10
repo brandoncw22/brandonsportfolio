@@ -305,14 +305,12 @@ html, body {
 .social-links {
   display:flex;
   flex-direction: row;
+  align-items: center;
   gap: 20px;
 }
-.icon.email {
-  width: 36px;
-  height: 36px;
-  margin-top: 3px;
-  margin-left: 5px;
-}
+/* Ensure consistent icon sizing and alignment in hero */
+.social-links .icon { width: 40px; height: 40px; }
+.social-links .icon.email { margin: 0; }
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {
