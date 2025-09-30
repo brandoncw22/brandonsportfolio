@@ -15,6 +15,7 @@ import logo from "../images/logo.png";
 import githubicon from "../images/github.png";
 import linkedin_icon from "../images/linkedin.png"
 import emailicon from "../images/email.png";
+import resumefile from "../resume/BrandonWendell_Resume_Summer2025.pdf"
 
 import Gallery from '../components/Gallery';
 import Experience from '../components/Experience';
@@ -82,7 +83,10 @@ function Home () {
                         </h1>
                         {/* Quick scroll buttons to key sections */}
                         <div id="direct-buttons">
-                            <button onClick={() => scrollTo(aboutRef)}>About Me</button>
+                            <a href={resumefile} download='brandonresume' target='_blank' rel="noreferrer">
+                                <button>Resume</button>
+                            </a>
+                            
                             <button onClick={() => scrollTo(contactRef)}>Contact</button>
                         </div>
                         <div>
