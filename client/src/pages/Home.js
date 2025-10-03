@@ -15,7 +15,7 @@ import logo from "../images/logo.png";
 import githubicon from "../images/github.png";
 import linkedin_icon from "../images/linkedin.png"
 import emailicon from "../images/email.png";
-import resumefile from "../resume/BrandonWendell_Resume_Summer2025.pdf"
+import resumefile from "../resume/brandonwendell_resume_fall2025.pdf"
 
 import Gallery from '../components/Gallery';
 import Experience from '../components/Experience';
